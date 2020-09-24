@@ -1,0 +1,42 @@
+[
+    {
+            "hostname": "host1",
+            "available": True,
+            "network": {
+                "ipaddr": IPv4Address("10.10.1.60"),
+                "gateway": IPv4Address("10.10.1.1"),
+                "netmask": "255.255.255.0",
+                "ethernet": {
+                    "mtu": 1500,
+                    "fc-mode": "none"
+                },
+            },
+            "led": {
+                "blinkstick": {
+                    "frontColor": 0xffff,
+                    "backColor": 0xffff,
+                    "blinkRate": 4
+                }
+            },
+    },
+    {
+            "hostname": "host2",
+            "available": True,
+            "network": {
+                "ipaddr": IPv4Address("10.10.1.61"),
+                "gateway": IPv4Address("10.10.1.1"),
+                "netmask": "255.255.255.0",
+                "ethernet": {
+                    "mtu": 1500,
+                    "fc-mode": "none"
+                },
+            },
+            "led": {
+                "blinkstick": {
+                    "frontColor": 0xffff,
+                    "backColor": 0xffff,
+                    "blinkRate": 4
+                }
+            },
+    }
+]
