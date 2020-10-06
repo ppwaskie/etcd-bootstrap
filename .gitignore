@@ -1,3 +1,5 @@
 .vscode/.*
+.devcontainer/
 backup/
 backup/.*
+notes
