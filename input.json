@@ -2,7 +2,6 @@
     "hosts": [
         {
             "hostname": "rpi1",
-            "available": "true",
             "network": [
                 {
                     "ipaddr": "10.10.1.60",
@@ -26,7 +25,6 @@
         },
         {
             "hostname": "rpi2",
-            "available": "false",
             "network": [
                 {
                     "ipaddr": "10.10.1.61",

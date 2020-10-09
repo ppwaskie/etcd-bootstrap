@@ -21,13 +21,16 @@ with open("./input.json", "r") as f:
 # TODO: not scalable as deleting nodes will leave gaps, fix this later (maybe add count of current nodes in DB)
 node_num = 1
 
-# Load the etcd3 database
+# Load the etcd3 database.  Part of the initial state will be all nodes start in "available" state
 for host in data['hosts']:
     json_nodedata = json.dumps(host)
-    node_key = "/hosts/node" + str(node_num)
+    node_key_root = "/hosts/node" + str(node_num)
+    node_availability = node_key_root + "/available"
+    node_hostdata = node_key_root + "/hostdata"
 
     # Load the next node's record
-    client.put(node_key, json_nodedata)
+    client.put(node_availability, "true")
+    client.put(node_hostdata, json_nodedata)
     node_num += 1
 
 #    hostname = host.get('hostname')
